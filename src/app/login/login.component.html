@@ -1,0 +1,29 @@
+<div class="container text-center" style="max-width: 300px;">
+    <form class="form-group row">
+      <div class="row">
+        <h1 class="display-6 text-center fw-bold" style="letter-spacing: 2px;">
+          {{titulo}}
+        </h1>
+      </div>
+  
+      <div class="row">
+        <div>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" [(ngModel)]="usuario" name="usuario"
+            class="form-control" placeholder="Usuario">
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" id="pass" [(ngModel)]="pass" name="pass" 
+            class="form-control" placeholder="Password">
+        </div>
+      </div>
+
+      <div class="row"><br/></div>
+  
+      <div class="row">
+        <input type="submit" class="btn btn-primary" value="VALIDAR"
+        (click)="comprobarCredenciales(usuario, pass)">
+      </div>
+    </form>
+</div>
