@@ -3,6 +3,7 @@ import { Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, RouterOutlet, RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -22,9 +23,29 @@ export class LoginComponent {
   comprobarCredenciales(usuario: string, pass: string) {
     if (usuario == "admin" && pass == "admin") {
       this.credencialesCorrectas = true;
-      this.router.navigate(['galeria']);
+      this.mostrarAlertaPositiva();
     } else {
-      alert('Credenciales incorrectas');
+      this.mostrarAlertaNegativa();
     }
+  }
+
+  mostrarAlertaPositiva() {
+    Swal.fire({
+      title: 'Credenciales correctas',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['galeria']);
+      }
+    });
+  }
+
+  mostrarAlertaNegativa() {
+    Swal.fire({
+      title: 'Credenciales incorrectas',
+      icon: 'error',
+      confirmButtonText: 'Aceptar'
+    });
   }
 }
