@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, RouterOutlet, RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import 'animate.css';
 
 @Component({
   selector: 'app-login',
@@ -16,13 +17,11 @@ export class LoginComponent {
   titulo = "LOGIN";
   usuario: string = "";
   pass: string = "";
-  credencialesCorrectas: boolean = false;
 
   constructor(private router: Router) {}
 
   comprobarCredenciales(usuario: string, pass: string) {
     if (usuario == "admin" && pass == "admin") {
-      this.credencialesCorrectas = true;
       this.mostrarAlertaPositiva();
     } else {
       this.mostrarAlertaNegativa();
