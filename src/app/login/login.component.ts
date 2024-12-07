@@ -9,7 +9,7 @@ import 'animate.css';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, RouterModule, RouterOutlet],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -35,7 +35,7 @@ export class LoginComponent {
       confirmButtonText: 'Aceptar'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.router.navigate(['galeria']);
+        this.router.navigate(['/galeria']);
       }
     });
   }
