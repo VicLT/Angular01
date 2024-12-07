@@ -1,28 +1,19 @@
-<!--@if(weatherData && weatherData.main) {
-    <p>La temperatura en Alicante es de <strong>{{this.weatherData.main.temp}}</strong></p>
-}
-
-@if(!weatherData || !weatherData.main) {
-    <p>Cargando datos del clima...</p>
-}-->
-
-<p>La temperatura en Alicante es de <strong>{{this.weatherData.main.temp}}</strong></p>
-
-<!--<div class="animate__bounceIn">
+<div class="animate__bounceIn">
     <div class="container text-center">
         <div class="row row-cols-3">
             @for(ciudad of ciudades; track ciudad.id) {
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img style="height: 10rem" src={{ciudad.imagen}}
-                        class="card-img-top" alt={{ciudad.nombre}}>
+                    <div class="card" style="width: auto;">
+                        <img style="height: 200px" src={{ciudad.imagen}}
+                            class="card-img-top" alt={{ciudad.nombre}}>
                         <div class="card-body">
                             <h5 class="card-title">{{ciudad.nombre}}</h5>
-                            <p class="card-text">{{ciudad.descripcion}}</p>
+                            <p class="card-text">{{ciudad.clima}}<br>
+                                {{ciudad.getTemperaturaFormateada}}ºC</p>
                         </div>
                     </div>
                 </div>
             }
         </div>
     </div>
-</div>-->
+</div>
