@@ -19,6 +19,6 @@ export class Ciudad {
       }
 
       get getTemperaturaFormateada(): number {
-        return parseFloat(this.longitud.toFixed(1)); // Limitar a 1 decimal
+        return parseFloat(this.longitud.toFixed(1));
       }
 }

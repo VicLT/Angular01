@@ -1,12 +1,12 @@
 .card {
-    height: 300px; /* Altura fija del contenedor */
-    display: flex; /* Opcional: para centrar el contenido */
-    flex-direction: column; /* Opcional: estructura de la tarjeta */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
   }
   
   .card-img-top {
-    height: 100%; /* La imagen llena todo el contenedor */
-    width: 100%; /* Asegura que ocupe el ancho */
-    object-fit: cover; /* Mantiene el ratio de aspecto mientras llena el espacio */
-    object-position: center; /* Opcional: centra la imagen */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
